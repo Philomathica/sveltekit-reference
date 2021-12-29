@@ -1,15 +1,20 @@
-<script context="module">
-  export async function load({ session }) {
+<script context="module" lang="ts">
+  import type { Locals } from '$lib/types';
+  import type { Load } from '@sveltejs/kit';
+
+  export const load: Load = ({ session }) => {
     return {
       props: {
-        user: session.user,
+        user: (session as Locals).user,
       },
     };
-  }
+  };
 </script>
 
-<script>
-  export let user;
+<script lang="ts">
+  import type { User } from '$lib/types';
+
+  export let user: User;
 </script>
 
 <h1>Welcome to SvelteKit Auth</h1>

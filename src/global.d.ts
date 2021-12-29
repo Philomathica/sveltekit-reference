@@ -7,7 +7,3 @@ interface ImportMetaEnv {
   VITE_AUTH0_REDIRECT_URI: string;
   VITE_AUTH0_LOGOUT_URI: string;
 }
-
-interface Locals {
-  user: unknown;
-}
