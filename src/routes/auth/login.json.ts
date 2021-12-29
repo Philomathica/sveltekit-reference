@@ -1,3 +1,4 @@
+import type { Locals } from '$lib/types';
 import { auth0 } from '$lib/variables';
 import type { RequestHandler } from '@sveltejs/kit';
 

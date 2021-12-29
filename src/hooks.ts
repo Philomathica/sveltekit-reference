@@ -1,7 +1,8 @@
+import type { Locals } from '$lib/types';
 import type { GetSession, Handle } from '@sveltejs/kit';
 import cookie from 'cookie';
 
-export const handle: Handle = async ({ request, resolve }) => {
+export const handle: Handle<Locals> = async ({ request, resolve }) => {
   const cookies = cookie.parse(request.headers.cookie || '');
 
   request.locals.user = cookies.user && JSON.parse(cookies.user);
@@ -13,7 +14,7 @@ export const handle: Handle = async ({ request, resolve }) => {
   return response;
 };
 
-export const getSession: GetSession = ({ locals }) => {
+export const getSession: GetSession<Locals> = ({ locals }) => {
   return {
     user: locals.user,
   };
