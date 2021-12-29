@@ -17,7 +17,7 @@
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
 {#if user}
-  <h2>Welcome {user.name}</h2>
+  <h2>Welcome to the philomatica universe {user.name}</h2>
   <a href="/auth/logout.json" rel="external">
     <button class="p-2 border-2">Logout</button>
   </a>
