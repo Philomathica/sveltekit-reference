@@ -12,7 +12,7 @@
   import Nav from '$lib/components/layout/Nav.svelte';
   import PreloadingIndicator from '$lib/components/ui/PreloadingIndicator.svelte';
 
-  $: section = $page.path.split('/')[1];
+  $: section = $page.url.pathname.split('/')[1];
 </script>
 
 <div class="container mx-auto p-4">

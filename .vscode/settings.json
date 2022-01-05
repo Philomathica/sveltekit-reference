@@ -1,4 +1,5 @@
 {
+  "headwind.runOnSave": true,
   "eslint.validate": ["javascript", "typescript", "svelte"],
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
