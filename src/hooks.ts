@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import type { Locals } from '$lib/types';
 import type { GetSession, Handle } from '@sveltejs/kit';
 import cookie from 'cookie';

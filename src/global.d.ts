@@ -1,9 +1,15 @@
 /// <reference types="@sveltejs/kit" />
 
-interface ImportMetaEnv {
-  VITE_AUTH0_DOMAIN: string;
-  VITE_AUTH0_CLIENT_ID: string;
-  VITE_AUTH0_CLIENT_SECRET: string;
-  VITE_AUTH0_REDIRECT_URI: string;
-  VITE_AUTH0_LOGOUT_URI: string;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface ImportMetaEnv {}
+
+declare namespace NodeJS {
+  interface ProcessEnv {
+    AUTH0_DOMAIN: string;
+    AUTH0_CLIENT_ID: string;
+    AUTH0_CLIENT_SECRET: string;
+    AUTH0_REDIRECT_URI: string;
+    AUTH0_LOGOUT_URI: string;
+    NODE_ENV: 'development' | 'production';
+  }
 }
