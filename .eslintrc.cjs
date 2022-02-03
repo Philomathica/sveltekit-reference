@@ -9,6 +9,9 @@ module.exports = {
     'svelte3/typescript': () => require('typescript'),
     'svelte3/ignore-styles': () => true,
   },
+  globals: {
+    User: 'readonly',
+  },
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020,

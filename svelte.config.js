@@ -13,7 +13,6 @@ const config = {
 
   kit: {
     adapter: vercel(),
-    target: 'body',
   },
 };
 

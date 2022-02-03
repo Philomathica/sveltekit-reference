@@ -1,19 +1,16 @@
 <script context="module" lang="ts">
-  import type { Locals } from '$lib/types';
   import type { Load } from '@sveltejs/kit';
 
   export const load: Load = ({ session }) => {
     return {
       props: {
-        user: (session as Locals).user,
+        user: session.user,
       },
     };
   };
 </script>
 
 <script lang="ts">
-  import type { User } from '$lib/types';
-
   export let user: User;
 </script>
 

@@ -1,8 +1,7 @@
-import type { Locals } from '$lib/types';
 import { auth0 } from '$lib/variables';
 import type { RequestHandler } from '@sveltejs/kit';
 
-export const get: RequestHandler<Locals> = () => {
+export const get: RequestHandler = () => {
   const queryParams = new URLSearchParams({
     response_type: 'code',
     client_id: auth0.clientId,
