@@ -1,8 +1,7 @@
-import type { Locals } from '$lib/types';
 import { auth0 } from '$lib/variables';
 import type { RequestHandler } from '@sveltejs/kit';
 
-export const get: RequestHandler<Locals> = async ({ url, locals }) => {
+export const get: RequestHandler = async ({ url, locals }) => {
   const code = url.searchParams.get('code');
   const token = await getToken(code);
   const user = await getUser(token.access_token);

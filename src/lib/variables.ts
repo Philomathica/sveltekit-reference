@@ -8,7 +8,7 @@ export const auth0 = {
   logoutUri: getServerEnvVar('AUTH0_LOGOUT_URI'),
 };
 
-function getServerEnvVar(key: keyof typeof process.env) {
+function getServerEnvVar(key: keyof NodeJS.ProcessEnv) {
   if (browser) {
     return;
   }
